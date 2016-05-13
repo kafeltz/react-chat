@@ -1,0 +1,109 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding-top: 25px;
+}
+
+.hide {
+  display: none;
+}
+
+.chatBox {
+  background: #EEE;
+  border: 1px solid #888;
+  box-sizing: border-box;
+  font-size: 12px;
+  min-height: 30px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.chatBox .chatHeader {
+  color: #000;
+  background: #CCC;
+  height: 25px;
+  box-sizing: border-box;
+  padding: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 12px;
+}
+.chatBox .chatBody {
+  color: #000;
+  background: #EEE;
+  height: 25px;
+  box-sizing: border-box;
+  padding: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 12px;
+  height: 150px;
+  overflow-y: scroll;
+}
+.chatBox .chatFooter {
+  color: #000;
+  background: #DDD;
+  min-height: 25px;
+  box-sizing: border-box;
+  padding: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 12px;
+}
+
+.chatControls, .chatStatus {
+  position: relative;
+}
+.chatControls ul, .chatStatus ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+  position: absolute;
+  right: 0;
+}
+.chatControls ul li, .chatStatus ul li {
+  display: inline-block;
+}
+.chatControls ul li a, .chatStatus ul li a {
+  text-align: center;
+  display: block;
+  color: blue;
+  text-decoration: none;
+  height: 15px;
+  min-width: 80px;
+  background: #CCC;
+  text-transform: uppercase;
+}
+.chatControls ul li a:hover, .chatStatus ul li a:hover {
+  background: #FFF;
+}
+
+.chatControls ul {
+  right: 0;
+}
+
+.chatStatus ul {
+  left: 0;
+}
+
+.message {
+  padding: 5px 5px 5px 10px;
+  box-sizing: border-box;
+  clear: both;
+}
+
+#log {
+  margin-top: 20px;
+  background: #f3f3f3;
+  min-height: 20px;
+  border: 1px solid #DDD;
+  padding: 10px 8px;
+  font-size: 11px;
+  font-family: tahoma;
+}
