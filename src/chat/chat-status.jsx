@@ -1,7 +1,10 @@
-var Loading = require('./loading.jsx');
+import React from 'react';
+import Loading from './loading';
 
-module.exports = React.createClass({
-  render: function() {
+
+
+export default class ChatStatus extends React.Component {
+  render() {
     return (
         <div className="chatStatus">
         <ul>
@@ -10,5 +13,5 @@ module.exports = React.createClass({
         </ul>
       </div>
     );
-  },
-});
+  }
+}

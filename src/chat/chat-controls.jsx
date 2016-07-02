@@ -1,5 +1,7 @@
-module.exports = React.createClass({
-  render: function() {
+import React from "react";
+
+export default class ChatControls extends React.Component {
+  render() {
     return (
         <div className="chatControls">
         <ul>
@@ -10,5 +12,5 @@ module.exports = React.createClass({
         </ul>
       </div>
     );
-  },
-});
+  }
+}

@@ -1,10 +1,13 @@
-var Message = require('./message.jsx');
+import React from "react";
+import Message from './message';
 
-module.exports = React.createClass({
-  render: function() {
-    return (
-      <div className="chatFooter">
-        <Message />
-      </div>);
-  },
-});
+
+export default class ChatFooter extends React.Component {
+    render() {
+      return (
+        <div className="chatFooter">
+          <Message />
+        </div>
+        );
+    }
+}

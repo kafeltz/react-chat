@@ -1,10 +1,11 @@
-var ChatHeader = require('./chat-header.jsx');
-var ChatBody = require('./chat-body.jsx');
-var ChatFooter = require('./chat-footer.jsx');
-require("./index.css");
+import ChatHeader  from './chat-header';
+import ChatBody  from './chat-body';
+import ChatFooter  from './chat-footer';
+import styles from "./index.css";
 
-module.exports = React.createClass({
-  render: function() {
+
+export default class ChatBox extends React.Component {
+  render() {
     return (
           <div className="chatBox">
             <ChatHeader />
@@ -12,5 +13,5 @@ module.exports = React.createClass({
             <ChatFooter />
           </div>
         );
-  },
-});
+  }
+}

@@ -1,12 +1,15 @@
-var ChatStatus = require('./chat-status.jsx');
-var ChatControls = require('./chat-controls.jsx');
+import React from 'react';
+import ChatStatus from './chat-status.jsx';
+import ChatControls from './chat-controls.jsx';
 
-module.exports = React.createClass({
-  render: function() {
+
+export default class ChatHeader extends React.Component {
+  render() {
     return (
-      <div className="chatHeader">
-        <ChatStatus />
-        <ChatControls />
-      </div>);
-  },
-});
+        <div className="chatHeader">
+            <ChatStatus />
+            <ChatControls />
+        </div>
+    );
+  }
+}
