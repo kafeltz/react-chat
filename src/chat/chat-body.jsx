@@ -1,7 +1,17 @@
 import React from "react";
+import Line from "./line";
+
 
 export default class ChatBody extends React.Component {
-  render() {
-    return (<div className="chatBody">Body of the chat</div>);
-  }
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <div className="chatBody">
+                <Line lines={this.props.conversations} />
+            </div>
+        );
+    }
 }

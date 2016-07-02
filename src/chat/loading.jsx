@@ -2,8 +2,9 @@ import React from "react";
 
 
 export default class Loading extends React.Component {
-    constructor(props) {    /* Note props is passed into the constructor in order to be used */
-       super(props);
+    constructor() {
+       super();
+
        this.state = {
            loading: false
        };

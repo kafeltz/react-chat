@@ -6,7 +6,7 @@ export default class ChatFooter extends React.Component {
     render() {
       return (
         <div className="chatFooter">
-          <Message />
+          <Message onNewMsg={this.props.onNewMsg} />
         </div>
         );
     }

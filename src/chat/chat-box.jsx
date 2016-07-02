@@ -5,13 +5,29 @@ import styles from "./index.css";
 
 
 export default class ChatBox extends React.Component {
-  render() {
-    return (
-          <div className="chatBox">
-            <ChatHeader />
-            <ChatBody />
-            <ChatFooter />
-          </div>
-        );
-  }
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            conversations: [
+                {count: 1, msg: 'Random text here!'},
+                {count: 2, msg: 'Mais textos!'}
+            ],
+        }
+    }
+
+    onNewMsg(count, newMsg) {
+        var appendedConversations = this.state.conversations.concat( [{count: count, msg: newMsg}] );
+        this.setState({conversations: appendedConversations});
+    }
+
+    render() {
+        return (
+              <div className="chatBox">
+                <ChatHeader />
+                    <ChatBody conversations={this.state.conversations} />
+                <ChatFooter onNewMsg={this.onNewMsg.bind(this)} />
+              </div>
+            );
+    }
 }
